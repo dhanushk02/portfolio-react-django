@@ -259,6 +259,16 @@ summary {
   font-weight: 600;
 }
 
+@media (hover: none) and (pointer: coarse) {
+  details summary {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  details[open] {
+    background: #243244;
+  }
+}
+
 /* ================= GRID / CARDS ================= */
 .grid {
   display: grid;
