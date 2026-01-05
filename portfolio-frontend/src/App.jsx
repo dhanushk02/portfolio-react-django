@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import "./App.css";
-const BACKEND_URL = "https://portfolio-backend-qfzi.onrender.com";
-
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 export default function App() {
   useEffect(() => {
     /* ================= REVEAL OBSERVER ================= */
