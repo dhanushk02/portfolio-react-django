@@ -110,7 +110,7 @@ export default function App() {
                 GitHub
               </a>
               <a
-                href={`${BACKEND_URL}/static/portfolio/resume.pdf`}
+                href={`${BACKEND_URL}/static/portfolio/Dhanush-Resume.pdf`}
                 target="_blank"
                 rel="noreferrer"
               >
@@ -293,7 +293,7 @@ export default function App() {
             <div>
               <strong>Resume</strong>
               <a
-                href={`${BACKEND_URL}/static/portfolio/resume.pdf`}
+                href={`${BACKEND_URL}/static/portfolio/Dhanush-Resume.pdf`}
                 target="_blank"
                 rel="noreferrer">
                 Download Resume
