@@ -4,6 +4,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  max-width: 100%;
 }
 
 html {
@@ -63,6 +64,10 @@ body {
   height: 2px;
   background: #38bdf8;
   border-radius: 2px;
+}
+
+body {
+  padding-top: 70px;
 }
 
 /* ================= HERO ================= */
@@ -385,6 +390,11 @@ summary {
   border-bottom: none;
 }
 
+.contact-value {
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
 .contact-icon {
   font-size: 1.6rem;
 }
@@ -401,6 +411,7 @@ summary {
   font-size: 1.05rem;
   color: #e5e7eb;
   text-decoration: none;
+  line-height: 1.4;
 }
 
 .contact-item a:hover {
@@ -421,6 +432,19 @@ summary {
 
 /* ================= MOBILE ================= */
 @media (max-width: 768px) {
+  .navbar {
+    height: 56px;
+    padding: 0 16px;
+  }
+
+  .nav-links {
+    display: none; /* hide links on mobile */
+  }
+
+  body {
+    padding-top: 56px;
+  }
+
   .hero-container {
     flex-direction: column-reverse;
     text-align: center;
@@ -467,7 +491,25 @@ summary {
     left: 13px !important;
   }
 
+  .card {
+    width: 100%;
+    max-width: 100%;
+    padding: 16px;
+    margin: 0 12px;
+  }
+
   .contact-card {
     padding: 25px;
+  }
+
+  .contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .contact-item span,
+  .contact-item a {
+    font-size: 14px;
   }
 }
