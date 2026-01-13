@@ -144,22 +144,22 @@ export default function App() {
         <h3>Skills</h3>
 
         <details>
-          <summary>💻 Web Technologies</summary>
+          <summary><span className="skill-icon">💻 </span>Web Technologies</summary>
           <p>HTML, CSS, JavaScript, Responsive Design</p>
         </details>
 
         <details>
-          <summary>🐍 Python</summary>
+          <summary><span className="skill-icon">🐍 </span>Python</summary>
           <p>Python, Django, REST APIs, Automation</p>
         </details>
 
         <details>
-          <summary>⚛️ React</summary>
+          <summary><span className="skill-icon">⚛️ </span>React</summary>
           <p>Hooks, Component-based architecture, API integration</p>
         </details>
 
         <details>
-          <summary>🛢️ Databases</summary>
+          <summary><span className="skill-icon">🛢️ </span>Databases</summary>
           <p>MySQL, PostgreSQL, SQLite</p>
         </details>
       </section>
