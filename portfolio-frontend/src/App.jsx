@@ -241,6 +241,9 @@ export default function App() {
               <li><strong>Tech:</strong> React, Vite, CSS, IntersectionObserver</li>
               <li><strong>Outcome:</strong> Built a responsive, recruiter-friendly personal portfolio.</li>
             </ul>
+            <a href="https://github.com/dhanushk02" target="_blank" rel="noreferrer" className="project-link">
+              View on GitHub →
+            </a>
           </div>
 
           <div className="card">
