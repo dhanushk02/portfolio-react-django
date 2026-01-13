@@ -144,7 +144,7 @@ export default function App() {
         <h3>Skills</h3>
 
         <details>
-          <summary>🌐 Web Technologies</summary>
+          <summary>💻 Web Technologies</summary>
           <p>HTML, CSS, JavaScript, Responsive Design</p>
         </details>
 
