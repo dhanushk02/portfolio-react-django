@@ -183,19 +183,16 @@ export default function App() {
           <div className="timeline-item left">
             <h4>Bachelor of Engineering</h4>
             <p>BIET, Davangere</p>
-            <p>CGPA: 6.85</p>
           </div>
 
           <div className="timeline-item right">
             <h4>PUC</h4>
             <p>St. John’s PU College</p>
-            <p>67%</p>
           </div>
 
           <div className="timeline-item left">
             <h4>SSLC</h4>
             <p>B.H.P.E.M.[CBSE].S</p>
-            <p>57.8%</p>
           </div>
         </div>
       </section>
@@ -288,7 +285,7 @@ export default function App() {
             <span className="contact-icon">📍</span>
             <div>
               <strong>Location</strong>
-              <p>Davangere, Karnataka, India</p>
+              <p>Bengaluru, Karnataka, India</p>
             </div>
           </div>
 
