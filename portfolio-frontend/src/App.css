@@ -221,62 +221,44 @@ section[id] {
 }
 
 /* ================= SKILLS ================= */
-details {
+.skill {
   background: #1e293b;
   padding: 20px;
   border-radius: 12px;
   margin-bottom: 20px;
   text-align: left;
-  transition: background 0.3s ease;
-}
-
-/* ===== Skills hover expand UX ===== */
-details[open] {
-  background: #243244;
-}
-
-details[open] summary {
-  color: #38bdf8;
-}
-
-/* Smooth reveal text */
-details p {
-  margin-top: 12px;
-  opacity: 0;
-  transform: translateY(-5px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-details[open] p {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-summary {
   cursor: pointer;
+}
+
+.skill-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   font-size: 1.2rem;
   font-weight: 600;
-  touch-action: manipulation;
-}
-/* Icons via CSS – mobile safe */
-summary::before {
-  margin-right: 8px;
 }
 
-.skill-web::before {
-  content: "💻";
+.skill-icon {
+  font-size: 1.4rem;
 }
 
-.skill-python::before {
-  content: "🐍";
+.skill p {
+  margin-top: 12px;
+  color: #d1d5db;
+  line-height: 1.6;
+  animation: fadeIn 0.25s ease;
 }
 
-.skill-react::before {
-  content: "⚛️";
-}
-
-.skill-db::before {
-  content: "🛢️";
+/* ===== Optional smooth open animation for skills ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* ================= GRID / CARDS ================= */

@@ -1,13 +1,21 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
+
 const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
+
 export default function App() {
+  const [open, setOpen] = useState(null);
+
+  const toggle = (index) => {
+    setOpen(open === index ? null : index);
+  };
+
   useEffect(() => {
     /* ================= REVEAL OBSERVER ================= */
     const revealSections = document.querySelectorAll(".reveal");
 
     const revealObserver = new IntersectionObserver(
-      entries => {
+      (entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             entry.target.classList.add("active");
@@ -25,7 +33,7 @@ export default function App() {
     const navLinks = document.querySelectorAll(".nav-links a");
 
     const spyObserver = new IntersectionObserver(
-      entries => {
+      (entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             navLinks.forEach(link => {
@@ -42,26 +50,9 @@ export default function App() {
 
     sections.forEach(section => spyObserver.observe(section));
 
-    /* ================= SKILLS HOVER OPEN ================= */
-    const skillDetails = document.querySelectorAll("#skills details");
-
-    skillDetails.forEach(detail => {
-      detail.addEventListener("mouseenter", () => {
-        detail.open = true;
-      });
-
-      detail.addEventListener("mouseleave", () => {
-        detail.open = false;
-      });
-    });
-
     return () => {
       revealObserver.disconnect();
       spyObserver.disconnect();
-
-      skillDetails.forEach(detail => {
-        detail.open = false;
-      });
     };
   }, []);
 
@@ -143,25 +134,45 @@ export default function App() {
       <section className="section reveal" id="skills">
         <h3>Skills</h3>
 
-        <details>
-          <summary className="skill-web">Web Technologies</summary>
-          <p>HTML, CSS, JavaScript, Responsive Design</p>
-        </details>
+        <div className="skill" onClick={() => toggle(0)}>
+          <div className="skill-header">
+            <span className="skill-icon">💻</span>
+            <span>Web Technologies</span>
+          </div>
+          {open === 0 && (
+            <p>HTML, CSS, JavaScript, Responsive Design</p>
+          )}
+        </div>
 
-        <details>
-          <summary className="skill-python">Python</summary>
-          <p>Python, Django, REST APIs, Automation</p>
-        </details>
+        <div className="skill" onClick={() => toggle(1)}>
+          <div className="skill-header">
+            <span className="skill-icon">🐍</span>
+            <span>Python</span>
+          </div>
+          {open === 1 && (
+            <p>Python, Django, REST APIs, Automation</p>
+          )}
+        </div>
 
-        <details>
-          <summary className="skill-react">React</summary>
-          <p>Hooks, Component-based architecture, API integration</p>
-        </details>
+        <div className="skill" onClick={() => toggle(2)}>
+          <div className="skill-header">
+            <span className="skill-icon">⚛️</span>
+            <span>React</span>
+          </div>
+          {open === 2 && (
+            <p>Hooks, Component-based architecture, API integration</p>
+          )}
+        </div>
 
-        <details>
-          <summary className="skill-db">Databases</summary>
-          <p>MySQL, PostgreSQL, SQLite</p>
-        </details>
+        <div className="skill" onClick={() => toggle(3)}>
+          <div className="skill-header">
+            <span className="skill-icon">🛢️</span>
+            <span>Databases</span>
+          </div>
+          {open === 3 && (
+            <p>MySQL, PostgreSQL, SQLite</p>
+          )}
+        </div>
       </section>
 
       {/* ================= EDUCATION ================= */}
