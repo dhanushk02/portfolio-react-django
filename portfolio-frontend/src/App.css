@@ -264,7 +264,7 @@ summary::before {
 }
 
 .skill-web::before {
-  content: "🌐";
+  content: "💻";
 }
 
 .skill-python::before {
