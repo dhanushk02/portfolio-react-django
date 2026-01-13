@@ -386,7 +386,8 @@ section[id] {
 }
 
 .contact-item {
-  display: flex;
+  display: grid;
+  grid-template-columns: 40px 1fr;
   align-items: center;
   gap: 20px;
   padding: 15px 0;
@@ -513,11 +514,8 @@ section[id] {
   }
 
   .contact-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    grid-template-columns: 1fr;
     text-align: center;
-    gap: 6px;
   }
 
   .contact-icon {
